@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catégorie</title>
+</head>
+<body>
+    <h1>Liste des catégories</h1>
+
+<form class="form-horizontal" method="post" action="/application/traitementCategorie/">
+{% csrf_token %}
+<fieldset>
+<legend>Ajout d'une catégorie</legend>
+  <ul>
+    {{form.as_ul}}
+  </ul>
+  <input type="submit" value="envoyer les données"/>
+</fieldset>
+</form>
+
+</body>
+</html>

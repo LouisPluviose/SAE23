@@ -8,4 +8,11 @@
 </head>
 <body>
     <h1> Hello World </h1>
+
+ <ol>
+        {% for cat in liste %}
+            <li> Nom : {{cat.nom_categorie}}, Description : {{cat.description_categorie}}</li>
+        {%endfor%}
+ </ol>
+
 </body>
