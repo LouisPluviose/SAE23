@@ -9,10 +9,17 @@
 <body>
     <h1> Hello World </h1>
 
+    <h1>Liste des catégories</h1>
+
  <ol>
-        {% for cat in liste %}
+        {% for cat in liste_categorie %}
             <li> Nom : {{cat.nom_categorie}}, Description : {{cat.description_categorie}}</li>
         {%endfor%}
+
+         {% for aut in liste_auteur %}
+        <li> Nom : {{aut.nom_auteur}}, Prénom : {{aut.prenom_auteur}}, Age {{aut.age_auteur}}</li>
+        {%endfor%}
  </ol>
+
 
 </body>

@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Catégorie</title>
+    <title>Auteurs</title>
 </head>
 <body>
-    <h1>Ajout des catégories</h1>
 
-<form class="form-horizontal" method="post" action="/application/traitementCategorie/">
+    <h1>Ajout des auteurs</h1>
+
+<form class="form-horizontal" method="post" action="/application/traitementAuteur/">
 {% csrf_token %}
 <fieldset>
-<legend>Ajout d'une catégorie</legend>
+<legend>Ajout d'un auteur</legend>
   <ul>
     {{form.as_ul}}
   </ul>
