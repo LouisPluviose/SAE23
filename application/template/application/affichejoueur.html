@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joueurs</title>
+</head>
+<body>
+
+    <h1>Affichage des Joueurs</h1>
+
+ <ol>
+        {% for jou in liste_joueur %}
+        <li> Nom : {{jou.nom_joueur}}</li>
+        {%endfor%}
+
+ </ol>
+
+</body>
+</html>

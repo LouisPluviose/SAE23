@@ -39,7 +39,7 @@ class JoueurForm(ModelForm):
         }
 
 
-class JeuxForm(ModelForm):
+class JeuForm(ModelForm):
     class Meta:
         model = models.Jeux
         fields = {'nom_jeu', 'description_jeu', 'categorie_jeu', 'annee_sortie_jeu', 'editeur_jeu', 'photo_jeu', 'auteur_jeu'}

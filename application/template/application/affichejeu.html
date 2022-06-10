@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeux</title>
+</head>
+<body>
+
+    <h1>Affichage des jeux</h1>
+
+ <ol>
+        {% for jeu in liste_jeux %}
+        <li> Nom : {{jeu.nom_jeu}}</li>
+        {%endfor%}
+
+ </ol>
+
+</body>
+</html>

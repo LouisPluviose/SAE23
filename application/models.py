@@ -19,7 +19,7 @@ class Auteurs(models.Model):
     nom_auteur = models.CharField(max_length=100)
     prenom_auteur = models.CharField(max_length=100)
     age_auteur = models.IntegerField(null = True, blank = True)
-    photo_auteur = models.ImageField(upload_to='images/', null = True, blank = True)
+    photo_auteur = models.ImageField(upload_to='images', null = True, blank = True)
 
     def __str__(self):
         chaine_auteur = f"{self.nom_auteur} {self.prenom_auteur}"
@@ -53,7 +53,7 @@ class Jeux(models.Model):
     categorie_jeu = models.ForeignKey(Categories, on_delete=models.CASCADE)
     annee_sortie_jeu = models.DateField(null = True, blank = True)
     editeur_jeu = models.CharField(max_length=100, null = True, blank = True)
-    photo_jeu = models.ImageField(upload_to='media/', null = True, blank = True)
+    photo_jeu = models.ImageField(upload_to='images')
     auteur_jeu = models.ManyToManyField(Auteurs)
 
     def __str__(self):

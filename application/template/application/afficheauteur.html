@@ -6,16 +6,14 @@
 </head>
 <body>
 
-    <h1>Ajout des auteurs</h1>
+    <h1>Affichage des auteurs</h1>
 
  <ol>
         {% for aut in liste_auteur %}
         <li> Nom : {{aut.nom_auteur}}, Prénom : {{aut.prenom_auteur}}, Age {{aut.age_auteur}}</li>
+        <img src="{{ aut.photo_auteur.url}}" alt="connect" style="max-height:300px">
         {%endfor%}
 
-        {% if aut.photo_auteur %}
-            <img src="{% static aut.photo_auteur %}" alt="{{aut.nom_auteur}}">
-        {% endif %}
  </ol>
 
 </body>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joueurs</title>
+</head>
+<body>
+
+    <h1>Ajout des joueurs</h1>
+
+<form class="form-horizontal" method="post"  enctype="multipart/form-data" action="/application/traitementJoueur/">
+{% csrf_token %}
+<fieldset>
+<legend>Ajout d'un auteur</legend>
+  <ul>
+    {{form.as_ul}}
+  </ul>
+  <input type="submit" value="envoyer les données"/>
+</fieldset>
+</form>
+
+</body>
+</html>
