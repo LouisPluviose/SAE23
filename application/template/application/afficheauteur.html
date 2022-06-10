@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auteurs</title>
+</head>
+<body>
+
+    <h1>Ajout des auteurs</h1>
+
+ <ol>
+        {% for aut in liste_auteur %}
+        <li> Nom : {{aut.nom_auteur}}, Prénom : {{aut.prenom_auteur}}, Age {{aut.age_auteur}}</li>
+        {%endfor%}
+
+        {% if aut.photo_auteur %}
+            <img src="{% static aut.photo_auteur %}" alt="{{aut.nom_auteur}}">
+        {% endif %}
+ </ol>
+
+</body>
+</html>

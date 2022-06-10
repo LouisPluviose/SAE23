@@ -18,5 +18,11 @@
 </fieldset>
 </form>
 
+ <ol>
+        {% for cat in affiche_categorie %}
+            <li> Nom : {{cat.nom_categorie}}, Description : {{cat.description_categorie}}</li>
+        {%endfor%}
+ </ol>
+
 </body>
 </html>

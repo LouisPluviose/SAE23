@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Categorie(models.Model):
+class Categories(models.Model):
     nom_categorie = models.CharField(max_length=100)
     description_categorie = models.TextField(null = True, blank = True)
 
@@ -19,7 +19,7 @@ class Auteurs(models.Model):
     nom_auteur = models.CharField(max_length=100)
     prenom_auteur = models.CharField(max_length=100)
     age_auteur = models.IntegerField(null = True, blank = True)
-    photo_auteur = models.ImageField(upload_to='media/', null = True, blank = True)
+    photo_auteur = models.ImageField(upload_to='images/', null = True, blank = True)
 
     def __str__(self):
         chaine_auteur = f"{self.nom_auteur} {self.prenom_auteur}"
@@ -50,7 +50,7 @@ class Joueurs(models.Model):
 class Jeux(models.Model):
     nom_jeu = models.CharField(max_length=100)
     description_jeu = models.TextField(null = True, blank = True)
-    categorie_jeu = models.ForeignKey(Categorie, on_delete=models.CASCADE)
+    categorie_jeu = models.ForeignKey(Categories, on_delete=models.CASCADE)
     annee_sortie_jeu = models.DateField(null = True, blank = True)
     editeur_jeu = models.CharField(max_length=100, null = True, blank = True)
     photo_jeu = models.ImageField(upload_to='media/', null = True, blank = True)

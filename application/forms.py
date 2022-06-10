@@ -6,7 +6,7 @@ from . import models
 
 class CategorieForm(ModelForm):
     class Meta:
-        model = models.Categorie
+        model = models.Categories
         fields = {'nom_categorie', 'description_categorie'}
         labels = {
             'nom_categorie': _('Nom de la catégorie'),
